@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import { Container } from 'reactstrap';
-import Jumbo from '../components/jumbotron'
+import Jumbo from '../components/Jumbotron'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -30,15 +30,16 @@ const HomePage = () => {
         <div>
             <Jumbo/>
             <Container style={{
-							display:'flex'
+							display:'flex',
+							justifyContent:'center'
 						}}>
 							<Card className={classes.root} onClick={() => history.push('/about')
 						}>
                 <CardActionArea >
 									<CardMedia
 									className={classes.media}
-									image="/static/images/cards/contemplative-reptile.jpg"
-									title="Contemplative Reptile"
+									image="/static/images/programming.png"
+									title="profile_avatar"
 									/>
 										<CardContent>
 											<Typography gutterBottom variant="h5" component="h2">
@@ -52,7 +53,7 @@ const HomePage = () => {
 								<CardActions>
 									<Button size="small" color="primary" onClick={() => history.push('/about')
 						}>
-										Learn More
+										Learn More About Me!
 									</Button>
 								</CardActions>
 							</Card>
@@ -61,28 +62,27 @@ const HomePage = () => {
                 <CardActionArea>
 									<CardMedia
 									className={classes.media}
-									image="/static/images/cards/contemplative-reptile.jpg"
-									title="Contemplative Reptile"
+									image="/static/images/coffee.jpg"
+									title="project"
 									/>
 										<CardContent>
 											<Typography gutterBottom variant="h5" component="h2">
-												Lizard
+												Projects
 											</Typography>
 											<Typography variant="body2" color="textSecondary" component="p">
-												Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-												across all continents except Antarctica
+												These are the projects that I have worked on. They are mostly quite simple apps but do take a look!
 											</Typography>
 										</CardContent>
 								</CardActionArea>
 								<CardActions>
 									<Button size="small" color="primary" onClick={() => history.push('/projects')
 						}>
-										Learn More
+										Check out my past projects!
 									</Button>
 								</CardActions>
 							</Card>
 
-							<Card className={classes.root}>
+							{/* <Card className={classes.root}>
                 <CardActionArea>
 									<CardMedia
 									className={classes.media}
@@ -104,7 +104,7 @@ const HomePage = () => {
 										Look at some cats
 									</Button>
 								</CardActions>
-							</Card>
+							</Card> */}
             </Container>
             This is the homepage!!
         </div>

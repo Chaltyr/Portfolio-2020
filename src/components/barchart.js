@@ -11,14 +11,11 @@ import {
 import { Animation } from '@devexpress/dx-react-chart';
 
 const data = [
-  { year: '1900', population: 2.525 },
-  { year: '1960', population: 3.018 },
-  { year: '1970', population: 3.682 },
-  { year: '1980', population: 4.440 },
-  { year: '1990', population: 5.310 },
-  { year: '2000', population: 6.127 },
-  { year: '2010', population: 6.930 },
-  { year: '2015', population: 10 },
+  { year: 'Team Work', population: 9 },
+  { year: 'Project Management', population: 8 },
+  { year: 'Python/Flask/SQL', population: 5 },
+  { year: 'React/Javascript', population: 8 },
+  { year: 'CSS/HTML', population: 8 },
 
 ];
 
@@ -41,13 +38,13 @@ export default class Bars extends React.PureComponent {
           rotated
         >
           <ArgumentAxis />
-          <ValueAxis max={7} />
+          <ValueAxis max={0} />
 
           <BarSeries
             valueField="population"
             argumentField="year"
           />
-          <Title text="World population" />
+          <Title text="Skill set" />
           <Animation />
         </Chart>
       </Paper>

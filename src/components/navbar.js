@@ -7,30 +7,66 @@ const Navbar = (props) => {
   const toggle = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <div>
+    <div className="Nav">
       <Nav tabs>
-        <NavItem>
+        <NavItem className="Nav-item">
           <NavLink href="/">Home</NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem className="Nav-item">
           <NavLink href="/about">About</NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem className="Nav-item">
           <NavLink href="/projects">Projects</NavLink>
         </NavItem>
-        <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+        <Dropdown nav isOpen={dropdownOpen} toggle={toggle} className="Nav-item">
           <DropdownToggle nav caret>
             Contact
           </DropdownToggle>
           <DropdownMenu>
             {/* <DropdownItem header>Header</DropdownItem> */}
-            <DropdownItem >Github</DropdownItem>
-            <DropdownItem>LinkedIn</DropdownItem>
+            <DropdownItem className="Nav-item2">Github</DropdownItem>
+            <DropdownItem className="Nav-item2">LinkedIn</DropdownItem>
             <DropdownItem divider />
-            <DropdownItem>Contact</DropdownItem>
+            <DropdownItem className="Nav-item2" href="/contact">Contact</DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </Nav>
+      <style jsx>{`
+        @keyframes fadeInAnimation { 
+          0% { 
+              opacity: 0; 
+          } 
+          100% { 
+              opacity: 1; 
+            } 
+          }
+
+        .Nav{
+          background-color: black
+        }
+        
+        .Nav-item {
+          color: black;
+					transition: 0.5s;
+        }
+
+        .Nav-item2 {
+          color: black;
+					transition: 0.5s;
+        }
+
+        .Nav-item2:hover {
+          text-decoration: underline;
+					background-color: black;
+					color: white;
+        }
+
+        .Nav-item:hover {
+          text-decoration: underline;
+					background-color: white;
+					color: white;
+        }
+      `}</style>
     </div>
   );
 }

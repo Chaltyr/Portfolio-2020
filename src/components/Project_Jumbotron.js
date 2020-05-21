@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron, Container } from 'reactstrap';
 
 
-const Jumbo = (props) => {
+const Jumbo2 = (props) => {
   return (
     <div >
       <Jumbotron style={{
@@ -11,12 +11,12 @@ const Jumbo = (props) => {
         // backgroundColor: 'red'
     }} fluid>
         <Container  fluid>
-          <h1 className="display-3">Web Development is but the first step</h1>
-          <p className="lead">Welcome to my portfolio, please enjoy your stay</p>
+          <h1 className="display-3">Projects</h1>
+          <p className="lead">These are the few projects that I have worked on or completed</p>
         </Container>
       </Jumbotron>
     </div>
   );
 };
 
-export default Jumbo;
+export default Jumbo2;

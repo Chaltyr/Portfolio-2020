@@ -1,17 +1,20 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
-import HomePage from './pages/Homepage';
-import Navbar from './components/navbar';
-import About from './pages/About';
-import Projects from './pages/Projects';
+import HomePage from './pages/homepage';
+import Navbar from './components/Navbar';
+import About from './pages/about';
+import Projects from './pages/projects';
+import Layout from './components/Layout';
+import Contact from './pages/contact';
 
 function App() {
   return (
-    <div className="App">
-      <div className="Navbar">
+    <Layout>
+         <div className="App" >
+      {/* <div className="Navbar">
         <Navbar/>
-      </div>
+      </div> */}
       <Switch>
         <Route exact path="/">
            <HomePage/>
@@ -22,8 +25,24 @@ function App() {
         <Route path="/projects">
           <Projects/>
         </Route>
+        <Route path="/contact">
+          <Contact/>
+        </Route>
       </Switch>
     </div>
+    <footer style={{
+      display: 'flex',
+      justifyContent: 'center',
+      paddingBottom: '10px',
+      paddingTop: '10px',
+      backgroundColor: 'black',
+      color: 'white'
+
+    }}>
+      Made by<a href="www.linkedin.com/in/louis-wong-king-dinn-22a156118"> Louis Wong</a> @ 2020
+    </footer>
+    </Layout>
+ 
   );
 }
 
