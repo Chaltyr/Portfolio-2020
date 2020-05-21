@@ -24,8 +24,8 @@ const Navbar = (props) => {
           </DropdownToggle>
           <DropdownMenu>
             {/* <DropdownItem header>Header</DropdownItem> */}
-            <DropdownItem className="Nav-item2">Github</DropdownItem>
-            <DropdownItem className="Nav-item2">LinkedIn</DropdownItem>
+            <DropdownItem className="Nav-item2" href="https://github.com/Chaltyr?tab=repositories">Github</DropdownItem>
+            <DropdownItem className="Nav-item2" href="www.linkedin.com/in/louis-wong-king-dinn-22a156118">LinkedIn</DropdownItem>
             <DropdownItem divider />
             <DropdownItem className="Nav-item2" href="/contact">Contact</DropdownItem>
           </DropdownMenu>
