@@ -58,7 +58,7 @@ const HomePage = () => {
 								</CardActions>
 							</Card>
 
-							<Card className={classes.root}>
+							<Card className={classes.root} onClick={() => history.push('/about')}>
                 <CardActionArea>
 									<CardMedia
 									className={classes.media}
