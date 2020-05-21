@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar1'
+import Navbar from './Navbar'
 
 const Layout = props => (
     <div className="layout">

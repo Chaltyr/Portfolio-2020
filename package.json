@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": { "node": "12.x" },
   "dependencies": {
     "@devexpress/dx-react-chart": "^2.6.3",
     "@devexpress/dx-react-chart-material-ui": "^2.6.3",
