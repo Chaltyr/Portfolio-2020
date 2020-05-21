@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
 import HomePage from './pages/homepage';
-import Navbar from './components/Navbar';
 import About from './pages/about';
 import Projects from './pages/projects';
 import Layout from './components/Layout';
@@ -12,9 +11,7 @@ function App() {
   return (
     <Layout>
          <div className="App" >
-      {/* <div className="Navbar">
-        <Navbar/>
-      </div> */}
+      
       <Switch>
         <Route exact path="/">
            <HomePage/>
